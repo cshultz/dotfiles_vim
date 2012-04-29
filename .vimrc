@@ -6,3 +6,8 @@ set ruler
 set number
 set t_Co=256
 colorscheme gummybears
+if has('gui_running')
+		set mouse=a
+else
+		set mouse=
+endif
