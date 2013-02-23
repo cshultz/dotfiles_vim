@@ -13,7 +13,7 @@ set sw=4
 " =============================
 " Python 
 " =============================
-set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 map <buffer> <C-e> :w<CR>:!python % <CR>
 
 " ==============================
@@ -27,6 +27,8 @@ colorscheme solarized
 " Key Mappings
 " ==============================
 map <leader>d :NERDTreeToggle<CR>
+map <leader>n :nohlsearch<CR>
+map <leader>t :TagbarToggle<CR>
 
 " Tab navigation
 :nmap <leader>tp :tabprevious<CR>
