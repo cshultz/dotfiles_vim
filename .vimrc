@@ -7,14 +7,21 @@ set number
 set title
 set autoindent
 set hlsearch
-set tw=78
-set sw=4
+"set tw=78
+"set sw=4
+set vb
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 
 " =============================
 " Python 
 " =============================
 "set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-map <buffer> <C-e> :w<CR>:!python % <CR>
+"map <buffer> <C-e> :w<CR>:!python % <CR>
+map <buffer> <C-e> :w<CR>:!ghc -o out %<CR>:!./out<CR>
+
+"Spell check
+nmap <leader>sc :setlocal spell spelllang=en_us
 
 " ==============================
 "  Color related
@@ -29,6 +36,7 @@ colorscheme solarized
 map <leader>d :NERDTreeToggle<CR>
 map <leader>n :nohlsearch<CR>
 map <leader>t :TagbarToggle<CR>
+map <leader>g :GundoToggle<CR>
 
 " Tab navigation
 :nmap <leader>tp :tabprevious<CR>
