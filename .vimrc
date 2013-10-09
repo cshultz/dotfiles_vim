@@ -5,13 +5,16 @@ set tabstop=4
 set ruler
 set number
 set title
-set autoindent
+"set autoindent
+filetype plugin indent on
 set hlsearch
 "set tw=78
-"set sw=4
+set sw=4
+set expandtab "convert tabs to spaces
 set vb
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+
 
 " =============================
 " Python 
@@ -23,6 +26,10 @@ map <buffer> <C-e> :w<CR>:!ghc -o out %<CR>:!./out<CR>
 "Spell check
 nmap <leader>sc :setlocal spell spelllang=en_us
 
+"Remap leader to ,
+let mapleader = ","
+"Remap jk to esc
+inoremap jk <ESC>
 " ==============================
 "  Color related
 "  ============================
