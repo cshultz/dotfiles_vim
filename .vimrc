@@ -8,6 +8,7 @@ set ruler
 set number
 set title
 "set autoindent
+set term=screen-256color
 filetype plugin indent on
 set hlsearch
 set tw=78
@@ -25,6 +26,7 @@ vnoremap . :norm.<CR>
 "set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 "map <buffer> <C-e> :w<CR>:!python % <CR>
 map <buffer> <C-e> :w<CR>:!ghc -o out %<CR>:!./out<CR>
+map <buffer> <C-e> :w<CR>:!gcc %<CR>:!./a.out<CR>
 
 "Remap leader to ,
 let mapleader = ","
@@ -35,16 +37,22 @@ inoremap jk <ESC>
 "  ============================
 set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme distinguished
 
 " ===============================
 " Key Mappings
 " ==============================
 map <leader>d :NERDTreeToggle<CR>
 map <leader>n :nohlsearch<CR>
-map <leader>b :TagbarToggle<CR>
+map <leader>t :TagbarToggle<CR>
 map <leader>g :GundoToggle<CR>
+
+"CtrlP - Easy File and Buffer search
+map <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 "Spell check
 map <leader>sc :setlocal spell spelllang=en_us<CR>
