@@ -61,3 +61,6 @@
 [submodule "bundle/hasksyn"]
 	path = bundle/hasksyn
 	url = git://github.com/travitch/hasksyn.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
