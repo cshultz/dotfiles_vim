@@ -3,7 +3,7 @@ filetype plugin indent on
 syntax enable 
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=0
 set ruler
 set number
 set title
@@ -14,9 +14,13 @@ set hlsearch
 set tw=78
 set sw=4
 set expandtab "convert tabs to spaces
+set smarttab
 set vb
+set clipboard=unnamed
+set guioptions-=r
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+set guifont=Consolas\ Bold:h16
 
 vnoremap . :norm.<CR>
 
